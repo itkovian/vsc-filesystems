@@ -1,5 +1,5 @@
 #
-# Copyright 2009-2024 Ghent University
+# Copyright 2009-2025 Ghent University
 #
 # This file is part of vsc-filesystems,
 # originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
@@ -41,6 +41,7 @@ OS_LINUX_IGNORE_FILESYSTEMS = (
     'binfmt_misc',  # ?
     'rpc_pipefs',  # NFS RPC
     'fuse.sshfs',  # X2GO sshfs over fuse
+    'fuse.irods',  # irods fuse
 )
 
 
