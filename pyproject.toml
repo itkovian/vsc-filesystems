@@ -21,11 +21,10 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/vsc"]
 
-
 [project.scripts]
 
 
 [tool.uv.sources]
 vsc-base = { git = "https://github.com/itkovian/vsc-base.git", branch = "uv"}
-vsc-config = { git = "https://github.com/itkovian/vsc-config.git", branch = "uv"}
+vsc-config = { git = "ssh://git@github.com/itkovian/vsc-config.git", branch = "uv"}
 vsc-utils = { git = "https://github.com/itkovian/vsc-utils.git", branch = "uv"}
