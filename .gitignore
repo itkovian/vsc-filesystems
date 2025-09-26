@@ -13,6 +13,8 @@ develop-eggs
 .installed.cfg
 .eggs
 .eggs*
+buildroot
+wheelhouse
 
 # Installer logs
 pip-log.txt

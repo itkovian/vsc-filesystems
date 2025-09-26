@@ -1,0 +1,30 @@
+[project]
+name = "vsc-filesystems"
+version = "3.0.0"
+description = ""
+authors = [
+    {name = "Andy Georges",email = "andy.georges@ugent.be"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+poetry-core = ">=2.0.0,<3.0.0"
+vsc-base = { git = "git@github.com:itkovian/vsc-base.git", branch = "poetry"}
+vsc-utils = { git = "git@github.com:itkovian/vsc-utils.git", branch = "poetry"}
+vsc-config = { git = "git@github.com:itkovian/vsc-config.git", branch = "poetry"}
+
+
+[tool.poetry]
+packages = [
+    {include="vsc", from="src"}
+]
+
+[tool.poetry.scripts]
