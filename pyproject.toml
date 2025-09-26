@@ -1,30 +1,31 @@
 [project]
 name = "vsc-filesystems"
 version = "3.0.0"
-description = ""
-authors = [
-    {name = "Andy Georges",email = "andy.georges@ugent.be"}
-]
+description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Andy Georges", email = "itkovian@gmail.com" }
+]
 requires-python = ">=3.9,<4.0"
 dependencies = [
+    "vsc-base",
+    "vsc-config",
+    "vsc-utils",
 ]
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
 
-[tool.poetry.dependencies]
-poetry-core = ">=2.0.0,<3.0.0"
-vsc-base = { git = "git@github.com:itkovian/vsc-base.git", branch = "poetry"}
-vsc-utils = { git = "git@github.com:itkovian/vsc-utils.git", branch = "poetry"}
-vsc-config = { git = "git@github.com:itkovian/vsc-config.git", branch = "poetry"}
+[tool.hatch.build.targets.wheel]
+packages = ["src/vsc"]
 
 
-[tool.poetry]
-packages = [
-    {include="vsc", from="src"}
-]
+[project.scripts]
 
-[tool.poetry.scripts]
+
+[tool.uv.sources]
+vsc-base = { git = "https://github.com/itkovian/vsc-base.git", branch = "uv"}
+vsc-config = { git = "https://github.com/itkovian/vsc-config.git", branch = "uv"}
+vsc-utils = { git = "https://github.com/itkovian/vsc-utils.git", branch = "uv"}
