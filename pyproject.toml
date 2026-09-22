@@ -11,6 +11,17 @@ dependencies = [
     "vsc-base",
     "vsc-config",
     "vsc-utils",
+    "pyyaml",
+]
+
+[dependency-groups]
+dev = [
+  "tox",
+  "tox-uv",
+  "pytest>=7.0",
+  "pytest-cov",
+  "setuptools<54.0",
+  "prospector",
 ]
 
 
